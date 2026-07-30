@@ -6,13 +6,30 @@
     <title>SICLA Construct</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- NEW: Google Fonts (Oswald) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom styles to match the screenshots */
+        /* Custom styles */
         .bg-sicla-green { background-color: #01654a; }
         .text-sicla-green { color: #01654a; }
         .bg-sicla-overlay { background-color: rgba(255, 255, 255, 0.6); }
-        .bg-glass { background-color: rgba(180, 175, 175, 0.85); backdrop-filter: blur(4px); }
+        .bg-glass { 
+    background-color: rgba(15, 15, 15, 0.75); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Adds a subtle premium edge */
+}
         .clip-polygon { clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%); }
+        
+        /* NEW: Apply Oswald font to Headings and Navigation */
+        h1, h2, h3, nav a, #mobile-menu a, .font-oswald {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.02em; /* Adds a tiny bit of breathing room between letters */
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-100 flex flex-col min-h-screen relative overflow-x-hidden">
@@ -85,7 +102,7 @@
                 <!-- NEW: Second Logo on the black background -->
                 <img src="logo-2.jpg" alt="SICLA Construct Secondary Logo" class="w-48 sm:w-64 md:w-80 mb-6 md:mb-10 mx-auto md:mx-0 object-contain drop-shadow-xl rounded-lg">
 
-                <div class="bg-white rounded-[2rem] p-6 shadow-2xl text-center max-w-md mx-auto md:mx-0">
+                <div class="bg-white rounded-[2rem] p-6 shadow-2xl text-center max-w-md mx-auto md:mx-0" data-aos="fade-up">
                     <h1 class="text-xl md:text-2xl font-bold mb-4" data-i18n="hero_title">Belső és külső munkálatok Kovászna megyében</h1>
                     <div class="bg-sicla-green text-white text-3xl md:text-4xl font-black py-2 px-6 rounded-full inline-block shadow-lg">
                         0743-307-712
@@ -108,16 +125,16 @@
         <!-- About Section -->
         <section id="despre-noi" class="py-16 px-4">
             <div class="container mx-auto flex flex-col lg:flex-row gap-8">
-                <!-- Text Box -->
-                <div class="bg-glass rounded-[2rem] p-8 lg:p-12 w-full lg:w-1/3 shadow-xl">
-                    <h2 class="text-2xl font-black text-gray-700 mb-6 uppercase text-center" data-i18n="about_title">RÓLUNK</h2>
-                    <p class="text-gray-800 font-medium text-lg leading-relaxed text-justify" data-i18n="about_text">
+              <!-- Text Box -->
+                <div class="bg-glass rounded-[2rem] p-8 lg:p-12 w-full lg:w-1/3 shadow-xl" data-aos="fade-right">
+                    <h2 class="text-2xl font-black text-white mb-6 uppercase text-center font-oswald" data-i18n="about_title">RÓLUNK</h2>
+                    <p class="text-gray-200 font-medium text-lg leading-relaxed text-justify" data-i18n="about_text">
                         A SICLA Constructnál többet építünk, mint épületeket – bizalmat, minőséget és jövőt építünk. Széleskörű szakmai tapasztalatunkkal és elkötelezett szakemberekből álló csapatunkkal azért vagyunk itt, hogy elképzeléseit valóra váltsuk. Hiszünk az együttműködésben és a nyílt kommunikációban, átláthatóságot és biztonságot nyújtva minden munkánk során. Minket választva az ideális partnert kapja építőipari projektjeihez. Embereknek építünk. A jövőnek építünk.
                     </p>
                 </div>
                 
                 <!-- Images Grid -->
-                <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+                <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 relative" data-aos="fade-left">
                     <!-- Inserted rolunk_1 -->
                     <img src="rolunk_1.jpg" alt="Rólunk 1" class="w-full h-64 md:h-full object-cover rounded-xl shadow-lg border-4 border-white">
                     
@@ -135,16 +152,16 @@
        <!-- Mission Section -->
         <section id="misiune" class="py-16 px-4">
             <div class="container mx-auto flex flex-col lg:flex-row gap-8">
-                 <!-- Text Box -->
-                <div class="bg-glass rounded-[2rem] p-8 lg:p-12 w-full lg:w-2/5 shadow-xl ">
-                    <h2 class="text-2xl font-black text-gray-700 mb-6 uppercase text-center" data-i18n="mission_title">KÜLDETÉS</h2>
-                    <p class="text-gray-800 font-medium text-lg leading-relaxed text-justify" data-i18n="mission_text">
-                        A SICLA Constructnál küldetésünk egy jobb jövő építése közösségeink számára, mely kiválóságon és társadalmi felelősségvállaláson alapul. Hisszük, hogy minden projekt képes életeket megváltoztatni, és pozitív, tartós nyomot hagyni. Nemcsak modern és funkcionális épületek kivitelezésének szenteljük magunkat, hanem a kulturális örökség helyreállításának és megőrzésének is. Ezen erőfeszítéseinkkel hozzájárulunk a közösségek történelmének és identitásának megőrzéséhez, új életet adva az épületeknek. Továbbá aktívan részt veszünk jótékonysági tevékenységekben, támogatva a helyi kezdeményezéseket és segítve a rászorulókat. Az oktatási programok támogatásától kezdve az erőforrások adományozásáig a jót tenni akarás és a társadalomnak való visszaadás vágya vezérel minket. A minőség, az innováció és az etika iránti elkötelezettségünk révén nemcsak tereket, hanem életeket is átalakítunk. A SICLA-nál szívvel építünk az embereknek, a hagyományoknak és a jövőnek.
+                <!-- Text Box -->
+                <div class="bg-glass rounded-[2rem] p-8 lg:p-12 w-full lg:w-2/5 shadow-xl" data-aos="fade-right">
+                    <h2 class="text-2xl font-black text-white mb-6 uppercase text-center font-oswald" data-i18n="mission_title">KÜLDETÉS</h2>
+                    <p class="text-gray-200 font-medium text-lg leading-relaxed text-justify" data-i18n="mission_text">
+                        A SICLA Constructnál küldetésünk egy jobb jövő építése közösségeink számára, mely kiválóságon és társadalmi felelősségvállaláson alapul. Hisszük, hogy minden projekt képes életeket megváltoztatni, și pozitív, tartós nyomot hagyni. Nemcsak modern és funkcionális épületek kivitelezésének szenteljük magunkat, hanem a kulturális örökség helyreállításának és megőrzésének is. Ezen erőfeszítéseinkkel hozzájárulunk a közösségek történelmének és identitásának megőrzéséhez, új életet adva az épületeknek. Továbbá aktívan részt veszünk jótékonysági tevékenységekben, támogatva a helyi kezdeményezéseket és segítve a rászorulókat. Az oktatási programok támogatásától kezdve az erőforrások adományozásáig a jót tenni akarás és a társadalomnak való visszaadás vágya vezérel minket. A minőség, az innováció és az etika iránti elkötelezettségünk révén nemcsak tereket, hanem életeket is átalakítunk. A SICLA-nál szívvel építünk az embereknek, a hagyományoknak és a jövőnek.
                     </p>
                 </div>
                 
                 <!-- Images Grid -->
-                <div class="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 ">
+                <div class="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 " data-aos="fade-left">
                     <!-- Inserted kuldetes_1 -->
                     <img src="kuldetes_1.jpg" alt="Küldetés 1" class="w-full h-48 md:h-64 object-cover rounded-xl shadow-lg border-2 border-white">
                     
@@ -171,7 +188,7 @@
                 
                 <!-- Service Card 1 (Description 1) -->
                 <!-- order-1 keeps it 1st on mobile and 1st on desktop -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-1 md:order-1">
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-1 md:order-1" data-aos="fade-up" data-aos-delay="0">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="service_1_title">Szolgáltatás 1</h3>
                     <p class="text-white font-semibold text-lg drop-shadow-md" data-i18n="service_lorem">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -180,7 +197,7 @@
                 
                 <!-- Service Card 2 (Description 2) -->
                 <!-- order-3 makes it 3rd on mobile, md:order-2 keeps it 2nd on desktop -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-3 md:order-2">
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-3 md:order-2" data-aos="fade-up" data-aos-delay="150">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="service_2_title">Szolgáltatás 2</h3>
                     <p class="text-white font-semibold text-lg drop-shadow-md" data-i18n="service_lorem">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -189,7 +206,7 @@
                 
                 <!-- Rental Card 1 (Picture 1) -->
                 <!-- order-2 makes it 2nd on mobile, md:order-3 keeps it 3rd on desktop -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-2 md:order-3">
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-2 md:order-3" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="rental_1_title">Bérlés 1</h3>
                     <!-- REPLACE WITH YOUR IMAGE: equipment1.jpg -->
                     <div class="w-48 h-48 bg-white rounded-lg flex items-center justify-center p-4">
@@ -199,7 +216,7 @@
                 
                 <!-- Rental Card 2 (Picture 2) -->
                 <!-- order-4 keeps it 4th on both mobile and desktop -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-4 md:order-4">
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-4 md:order-4" data-aos="fade-up" data-aos-delay="450">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="rental_2_title">Bérlés 2</h3>
                     <!-- REPLACE WITH YOUR IMAGE: equipment2.jpg -->
                     <div class="w-full h-48 bg-white rounded-lg flex items-center justify-center p-4">
@@ -213,68 +230,97 @@
        <!-- Works / Before-After Section -->
         <section id="lucrari" class="py-16 px-4 bg-black/20">
             <div class="container mx-auto">
-                <h2 class="text-4xl font-bold text-white text-center mb-12 drop-shadow-lg" data-i18n="work_title">Előtte - utána</h2>
-                
-                <div class="flex flex-col gap-12 max-w-6xl mx-auto">
+                <!-- Main Title -->
+                <h2 class="text-4xl font-bold text-white text-center mb-12 drop-shadow-lg font-oswald" data-i18n="work_title" data-aos="fade-up">Előtte - utána</h2>
+                <p class="text-gray-200 text-lg text-center font-medium italic drop-shadow-md" data-i18n="slider_instruction">Húzza el a nyilakat!</p>
+                <!-- Vertical Before/After Sliders (Side-by-side on desktop) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     <!-- Pair 1 -->
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
-                        <!-- Inserted eu_1.2 (After) - LEFT -->
-                        <img src="eu-1.jpg" alt="After 1" class="w-full md:w-1/3 aspect-[3/4] object-cover rounded-lg border-2 border-white shadow-lg">
-                        
-                        <!-- Arrow (Points from Before to After) -->
-                        <div class="text-white text-4xl opacity-80 drop-shadow-lg">
-                            <i class="fas fa-arrow-right hidden md:block"></i>
-                            <i class="fas fa-arrow-down md:hidden"></i>
+                    <div class="ba-slider-container relative w-full aspect-[3/4] rounded-xl border-2 border-white shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <!-- After Image (Background) -->
+                        <img src="eu-1.2.jpg" alt="After 1" class="absolute inset-0 w-full h-full object-cover">
+                        <!-- Before Image (Clipped on top) -->
+                        <img src="eu-1.jpg" alt="Before 1" class="before-image absolute inset-0 w-full h-full object-cover" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <!-- Range Slider -->
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0">
+                        <!-- Drag Line & Handle -->
+                        <div class="slider-line absolute top-0 bottom-0 left-[50%] w-1 bg-white pointer-events-none z-10 transform -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center text-sicla-green border border-gray-200">
+                                <i class="fas fa-arrows-alt-h text-lg"></i>
+                            </div>
                         </div>
-                        
-                        <!-- Inserted eu-1 (Before) - RIGHT -->
-                        <img src="eu-1.2.jpg" alt="Before 1" class="w-full md:w-1/3 aspect-[3/4] object-cover rounded-lg border-2 border-white shadow-lg">
-                    </div>
-                    
-                     <!-- Pair 2 -->
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
-                        <!-- Inserted eu-2.2 (After) - LEFT -->
-                        <img src="eu-2.2.jpg" alt="After 2" class="w-full md:w-1/3 aspect-[3/4] object-cover rounded-lg border-2 border-white shadow-lg">
-                        
-                        <!-- Arrow -->
-                        <div class="text-white text-4xl opacity-80 drop-shadow-lg">
-                            <i class="fas fa-arrow-right hidden md:block"></i>
-                            <i class="fas fa-arrow-down md:hidden"></i>
-                        </div>
-                        
-                        <!-- Inserted eu-2 (Before) - RIGHT -->
-                        <img src="eu-2.jpg" alt="Before 2" class="w-full md:w-1/3 aspect-[3/4] object-cover rounded-lg border-2 border-white shadow-lg">
                     </div>
 
-                     <!-- Pair 3 -->
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
-                        <!-- Inserted eu-3.2 (After) - LEFT -->
-                        <img src="eu-3.2.jpg" alt="After 3" class="w-full md:w-1/3 aspect-video object-cover rounded-lg border-2 border-white shadow-lg">
-                        
-                        <!-- Arrow -->
-                        <div class="text-white text-4xl opacity-80 drop-shadow-lg">
-                            <i class="fas fa-arrow-right hidden md:block"></i>
-                            <i class="fas fa-arrow-down md:hidden"></i>
+                    <!-- Pair 2 -->
+                    <div class="ba-slider-container relative w-full aspect-[3/4] rounded-xl border-2 border-white shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <!-- After Image (Background) -->
+                        <img src="eu-2.jpg" alt="After 2" class="absolute inset-0 w-full h-full object-cover">
+                        <!-- Before Image (Clipped on top) -->
+                        <img src="eu-2.2.jpg" alt="Before 2" class="before-image absolute inset-0 w-full h-full object-cover" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <!-- Range Slider -->
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0">
+                        <!-- Drag Line & Handle -->
+                        <div class="slider-line absolute top-0 bottom-0 left-[50%] w-1 bg-white pointer-events-none z-10 transform -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center text-sicla-green border border-gray-200">
+                                <i class="fas fa-arrows-alt-h text-lg"></i>
+                            </div>
                         </div>
-                        
-                        <!-- Inserted eu-3 (Before) - RIGHT -->
-                        <img src="eu-3.jpg" alt="Before 3" class="w-full md:w-1/3 aspect-video object-cover rounded-lg border-2 border-white shadow-lg">
                     </div>
                 </div>
-                <div class="mt-20 max-w-7xl mx-auto">
-                    <h3 class="text-3xl font-bold text-white text-center mb-10 drop-shadow-lg uppercase" data-i18n="other_works_title">Egyéb munkáink</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                        <!-- Gallery Image 1 -->
-                        <img src="img-1.jpg" alt="Gallery Image 1" class="w-full h-64 lg:h-72 object-cover rounded-xl border-2 border-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer">
+
+                <!-- Pair 3 (Landscape, Full width below the other two) -->
+                <div class="mt-8 max-w-6xl mx-auto">
+                    <div class="ba-slider-container relative w-full aspect-video rounded-xl border-2 border-white shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <!-- After Image (Background) -->
+                        <img src="eu-3.jpg" alt="After 3" class="absolute inset-0 w-full h-full object-cover">
+                        <!-- Before Image (Clipped on top) -->
+                        <img src="eu-3.2.jpg" alt="Before 3" class="before-image absolute inset-0 w-full h-full object-cover" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+                        <!-- Range Slider -->
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20 m-0 p-0">
+                        <!-- Drag Line & Handle -->
+                        <div class="slider-line absolute top-0 bottom-0 left-[50%] w-1 bg-white pointer-events-none z-10 transform -translate-x-1/2 flex items-center justify-center">
+                            <div class="w-10 h-10 bg-white rounded-full shadow-xl flex items-center justify-center text-sicla-green border border-gray-200">
+                                <i class="fas fa-arrows-alt-h text-lg"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+              <!-- Gallery Slideshow -->
+                <div class="mt-24 max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold text-white text-center mb-10 drop-shadow-lg uppercase font-oswald" data-i18n="other_works_title">Egyéb munkáink</h3>
+                    
+                    <div class="relative w-full aspect-[4/3] md:aspect-video rounded-xl border-2 border-white shadow-xl overflow-hidden gallery-slideshow group" data-aos="zoom-in">
+                        <!-- Slides -->
+                        <div class="slide absolute inset-0 transition-opacity duration-700 opacity-100 z-10">
+                            <img src="img-1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+                            <img src="img-2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+                            <img src="img-3.jpg" alt="Gallery Image 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="slide absolute inset-0 transition-opacity duration-700 opacity-0 z-0">
+                            <img src="img-4.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+                        </div>
                         
-                        <!-- Gallery Image 2 -->
-                        <img src="img-2.jpg" alt="Gallery Image 2" class="w-full h-64 lg:h-72 object-cover rounded-xl border-2 border-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer">
-                        
-                        <!-- Gallery Image 3 -->
-                        <img src="img-3.jpg" alt="Gallery Image 3" class="w-full h-64 lg:h-72 object-cover rounded-xl border-2 border-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer">
-                        
-                        <!-- Gallery Image 4 -->
-                        <img src="img-4.jpg" alt="Gallery Image 4" class="w-full h-64 lg:h-72 object-cover rounded-xl border-2 border-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer">
+                        <!-- Controls (Hidden on mobile until tapped, visible on desktop hover) -->
+                        <button class="prev-slide absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/60 text-white w-10 h-10 md:w-12 md:h-12 rounded-full hover:bg-sicla-green transition-all z-20 flex items-center justify-center opacity-70 hover:opacity-100">
+                            <i class="fas fa-chevron-left text-lg"></i>
+                        </button>
+                        <button class="next-slide absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/60 text-white w-10 h-10 md:w-12 md:h-12 rounded-full hover:bg-sicla-green transition-all z-20 flex items-center justify-center opacity-70 hover:opacity-100">
+                            <i class="fas fa-chevron-right text-lg"></i>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+                            <button class="dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-white transition-opacity opacity-100 shadow-md"></button>
+                            <button class="dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-white transition-opacity opacity-50 shadow-md"></button>
+                            <button class="dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-white transition-opacity opacity-50 shadow-md"></button>
+                            <button class="dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-white transition-opacity opacity-50 shadow-md"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,7 +330,7 @@
         <section id="contact" class="py-24 px-4 relative flex items-center justify-center min-h-[50vh]">
             <div class="container mx-auto">
                 <!-- Removed md:mx-0 to ensure it stays centered on desktop too -->
-                <div class="bg-glass rounded-[3rem] p-12 max-w-md mx-auto shadow-2xl flex flex-col items-center text-center">
+                <div class="bg-glass rounded-[3rem] p-12 max-w-md mx-auto shadow-2xl flex flex-col items-center text-center" data-aos="zoom-in-up">
                     <h2 class="text-3xl font-bold text-white mb-8 drop-shadow-md" data-i18n="contact_title">KAPCSOLAT</h2>
                     
                     <p class="text-white font-bold text-xl mb-4 drop-shadow-md">
@@ -313,8 +359,92 @@
         <p>@GÁL ANDRÁS</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Scripts -->
     <script>
+        // --- Initialize AOS (Animate On Scroll) ---
+        AOS.init({
+            duration: 800, // Animation lasts 0.8s
+            once: true, // Only animate once when scrolling down
+            offset: 100 // Trigger animation 100px before the element hits the screen
+        });
+
+        //Before-After Slider
+        const sliders = document.querySelectorAll('.ba-slider-container');
+            sliders.forEach(container => {
+                const input = container.querySelector('.slider-input');
+                const beforeImage = container.querySelector('.before-image');
+                 const sliderLine = container.querySelector('.slider-line');
+
+            input.addEventListener('input', (e) => {
+                const value = e.target.value;
+                // Adjust the clipping mask to reveal the image underneath
+                beforeImage.style.clipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+                // Move the white line and handle to match
+                sliderLine.style.left = `${value}%`;
+            });
+        });
+        // --- Gallery Slideshow Logic ---
+        const slides = document.querySelectorAll('.gallery-slideshow .slide');
+        const dots = document.querySelectorAll('.gallery-slideshow .dot');
+        const prevBtn = document.querySelector('.prev-slide');
+        const nextBtn = document.querySelector('.next-slide');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('opacity-100', 'z-10');
+                slide.classList.add('opacity-0', 'z-0');
+                dots[i].classList.remove('opacity-100');
+                dots[i].classList.add('opacity-50');
+            });
+            
+            slides[index].classList.remove('opacity-0', 'z-0');
+            slides[index].classList.add('opacity-100', 'z-10');
+            dots[index].classList.remove('opacity-50');
+            dots[index].classList.add('opacity-100');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlideFunc() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlideFunc();
+            resetInterval();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+                resetInterval();
+            });
+        });
+
+        // Auto-play every 4 seconds
+        function startInterval() {
+            slideInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        startInterval();
         // --- Mobile Menu Toggle ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -352,6 +482,7 @@
                 rental_1_title: "Bérlés 1",
                 rental_2_title: "Bérlés 2",
                 work_title: "Előtte - utána",
+                slider_instruction: "Húzza el a nyilakat!",
                 other_works_title: "Egyéb munkák",
                 contact_title: "KAPCSOLAT",
                 contact_tel: "TEL",
@@ -376,6 +507,7 @@
                 rental_1_title: "Închiriere 1",
                 rental_2_title: "Închiriere 2",
                 work_title: "Înainte - după",
+                slider_instruction: "Trageți de săgeți!",
                 other_works_title: "Alte lucrări",
                 contact_title: "CONTACT",
                 contact_tel: "TEL",
