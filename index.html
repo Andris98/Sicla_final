@@ -48,8 +48,8 @@
 
             <!-- Social & Language -->
             <div class="hidden lg:flex items-center space-x-3 xl:space-x-4">
-                <a href="https://www.instagram.com/sicla.construct/" class="border-2 border-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/sic.la.construct" class="border-2 border-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sicla.construct/" class="border-2 border-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all"><i class="fab fa-instagram"></i></a>
                 <button id="lang-toggle-desktop" class="font-bold border-2 border-white px-2 py-1 rounded hover:bg-white hover:text-sicla-green transition-all">HU | RO</button>
             </div>
         </div>
@@ -63,8 +63,8 @@
             <a href="#contact" class="px-6 py-4 border-b border-emerald-700 font-bold hover:bg-emerald-800" data-i18n="nav_contact">KAPCSOLAT</a>
             <div class="px-6 py-4 flex items-center justify-between">
                 <div class="flex space-x-4">
-                    <a href="#" class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="https://www.facebook.com/sic.la.construct" class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="https://www.instagram.com/sicla.construct/" class="border-2 border-white rounded-full w-10 h-10 flex items-center justify-center"><i class="fab fa-instagram text-xl"></i></a>
                 </div>
                 <button id="lang-toggle-mobile" class="font-bold border-2 border-white px-3 py-2 rounded">HU | RO</button>
             </div>
@@ -136,7 +136,7 @@
         <section id="misiune" class="py-16 px-4">
             <div class="container mx-auto flex flex-col lg:flex-row gap-8">
                  <!-- Text Box -->
-                <div class="bg-glass rounded-[2rem] p-8 lg:p-12 w-full lg:w-2/5 shadow-xl order-2 lg:order-1">
+                <div class="bg-glass rounded-[2rem] p-8 lg:p-12 w-full lg:w-2/5 shadow-xl ">
                     <h2 class="text-2xl font-black text-gray-700 mb-6 uppercase text-center" data-i18n="mission_title">KÜLDETÉS</h2>
                     <p class="text-gray-800 font-medium text-lg leading-relaxed text-justify" data-i18n="mission_text">
                         A SICLA Constructnál küldetésünk egy jobb jövő építése közösségeink számára, mely kiválóságon és társadalmi felelősségvállaláson alapul. Hisszük, hogy minden projekt képes életeket megváltoztatni, és pozitív, tartós nyomot hagyni. Nemcsak modern és funkcionális épületek kivitelezésének szenteljük magunkat, hanem a kulturális örökség helyreállításának és megőrzésének is. Ezen erőfeszítéseinkkel hozzájárulunk a közösségek történelmének és identitásának megőrzéséhez, új életet adva az épületeknek. Továbbá aktívan részt veszünk jótékonysági tevékenységekben, támogatva a helyi kezdeményezéseket és segítve a rászorulókat. Az oktatási programok támogatásától kezdve az erőforrások adományozásáig a jót tenni akarás és a társadalomnak való visszaadás vágya vezérel minket. A minőség, az innováció és az etika iránti elkötelezettségünk révén nemcsak tereket, hanem életeket is átalakítunk. A SICLA-nál szívvel építünk az embereknek, a hagyományoknak és a jövőnek.
@@ -144,7 +144,7 @@
                 </div>
                 
                 <!-- Images Grid -->
-                <div class="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 order-1 lg:order-2">
+                <div class="w-full lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 ">
                     <!-- Inserted kuldetes_1 -->
                     <img src="kuldetes_1.jpg" alt="Küldetés 1" class="w-full h-48 md:h-64 object-cover rounded-xl shadow-lg border-2 border-white">
                     
@@ -168,36 +168,45 @@
         <!-- Services / Rentals Section -->
         <section id="servicii" class="py-16 px-4">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl">
-                <!-- Service Card 1 -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl">
+                
+                <!-- Service Card 1 (Description 1) -->
+                <!-- order-1 keeps it 1st on mobile and 1st on desktop -->
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-1 md:order-1">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="service_1_title">Szolgáltatás 1</h3>
                     <p class="text-white font-semibold text-lg drop-shadow-md" data-i18n="service_lorem">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </p>
                 </div>
-                <!-- Service Card 2 -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl">
+                
+                <!-- Service Card 2 (Description 2) -->
+                <!-- order-3 makes it 3rd on mobile, md:order-2 keeps it 2nd on desktop -->
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-3 md:order-2">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="service_2_title">Szolgáltatás 2</h3>
                     <p class="text-white font-semibold text-lg drop-shadow-md" data-i18n="service_lorem">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </p>
                 </div>
-                <!-- Rental Card 1 -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl">
+                
+                <!-- Rental Card 1 (Picture 1) -->
+                <!-- order-2 makes it 2nd on mobile, md:order-3 keeps it 3rd on desktop -->
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-2 md:order-3">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="rental_1_title">Bérlés 1</h3>
                     <!-- REPLACE WITH YOUR IMAGE: equipment1.jpg -->
                     <div class="w-48 h-48 bg-white rounded-lg flex items-center justify-center p-4">
                         <i class="fas fa-tools text-6xl text-gray-300"></i>
                     </div>
                 </div>
-                <!-- Rental Card 2 -->
-                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl">
+                
+                <!-- Rental Card 2 (Picture 2) -->
+                <!-- order-4 keeps it 4th on both mobile and desktop -->
+                <div class="bg-glass rounded-[2rem] p-10 flex flex-col items-center justify-center text-center min-h-[300px] shadow-xl order-4 md:order-4">
                     <h3 class="text-2xl font-bold text-white mb-6 drop-shadow-md" data-i18n="rental_2_title">Bérlés 2</h3>
                     <!-- REPLACE WITH YOUR IMAGE: equipment2.jpg -->
                     <div class="w-full h-48 bg-white rounded-lg flex items-center justify-center p-4">
                         <i class="fas fa-toolbox text-6xl text-gray-300"></i>
                     </div>
                 </div>
+                
             </div>
         </section>
 
@@ -215,7 +224,7 @@
                         <!-- Arrow (Points from Before to After) -->
                         <div class="text-white text-4xl opacity-80 drop-shadow-lg">
                             <i class="fas fa-arrow-right hidden md:block"></i>
-                            <i class="fas fa-arrow-up md:hidden"></i>
+                            <i class="fas fa-arrow-down md:hidden"></i>
                         </div>
                         
                         <!-- Inserted eu-1 (Before) - RIGHT -->
@@ -230,7 +239,7 @@
                         <!-- Arrow -->
                         <div class="text-white text-4xl opacity-80 drop-shadow-lg">
                             <i class="fas fa-arrow-right hidden md:block"></i>
-                            <i class="fas fa-arrow-up md:hidden"></i>
+                            <i class="fas fa-arrow-down md:hidden"></i>
                         </div>
                         
                         <!-- Inserted eu-2 (Before) - RIGHT -->
@@ -245,7 +254,7 @@
                         <!-- Arrow -->
                         <div class="text-white text-4xl opacity-80 drop-shadow-lg">
                             <i class="fas fa-arrow-right hidden md:block"></i>
-                            <i class="fas fa-arrow-up md:hidden"></i>
+                            <i class="fas fa-arrow-down md:hidden"></i>
                         </div>
                         
                         <!-- Inserted eu-3 (Before) - RIGHT -->
@@ -253,6 +262,7 @@
                     </div>
                 </div>
                 <div class="mt-20 max-w-7xl mx-auto">
+                    <h3 class="text-3xl font-bold text-white text-center mb-10 drop-shadow-lg uppercase" data-i18n="other_works_title">Egyéb munkáink</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                         <!-- Gallery Image 1 -->
                         <img src="img-1.jpg" alt="Gallery Image 1" class="w-full h-64 lg:h-72 object-cover rounded-xl border-2 border-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer">
@@ -285,11 +295,11 @@
                     </p>
 
                     <div class="flex space-x-6">
-                        <a href="#" class="border-4 border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all text-white drop-shadow-md">
-                            <i class="fab fa-instagram text-4xl"></i>
-                        </a>
-                        <a href="#" class="border-4 border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all text-white drop-shadow-md">
+                        <a href="https://www.facebook.com/sic.la.construct" class="border-4 border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all text-white drop-shadow-md">
                             <i class="fab fa-facebook-f text-4xl"></i>
+                        </a> 
+                        <a href="https://www.instagram.com/sicla.construct/" class="border-4 border-white rounded-full w-20 h-20 flex items-center justify-center hover:bg-white hover:text-sicla-green transition-all text-white drop-shadow-md">
+                            <i class="fab fa-instagram text-4xl"></i>
                         </a>
                     </div>
                 </div>
@@ -342,6 +352,7 @@
                 rental_1_title: "Bérlés 1",
                 rental_2_title: "Bérlés 2",
                 work_title: "Előtte - utána",
+                other_works_title: "Egyéb munkák",
                 contact_title: "KAPCSOLAT",
                 contact_tel: "TEL",
                 contact_email: "E-MAIL"
@@ -365,6 +376,7 @@
                 rental_1_title: "Închiriere 1",
                 rental_2_title: "Închiriere 2",
                 work_title: "Înainte - după",
+                other_works_title: "Alte lucrări",
                 contact_title: "CONTACT",
                 contact_tel: "TEL",
                 contact_email: "E-MAIL"
